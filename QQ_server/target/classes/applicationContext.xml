@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <!--Spring整合MyBatis框架-->
+    <!--配置连接池，这里还是使用c3p0连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/QQ?useTimezone=true&amp;serverTimezone=GMT%2B8"/>
+        <property name="user" value="root"/>
+        <property name="password" value="Jd+5521880"/>
+    </bean>
+
+    <!--配置SqlSessionFactory工厂
+    -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!--配置Dao接口所在包，对包中所有的接口都进行代理
+    具体的执行方法已经提供注解配置到了接口上
+    Mybatis MapperScannerConfigurer 自动扫描 将Mapper接口生成代理注入到Spring
+    Mybatis在与Spring集成的时候可以配置 MapperFactoryBean来生成Mapper接口的代理。
+    -->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.jiading.dao"/>
+    </bean>
+
+    <!--配置Spring框架声明式事务管理
+    mybatis也只是帮你执行，事务默认是不管的，我们可以通过aop切面将事务织进去
+    -->
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!--配置事务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="*" isolation="DEFAULT"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--配置AOP增强-->
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.jiading.service.impl.*ServiceImpl.*(..))"/>
+    </aop:config>
+
+</beans>

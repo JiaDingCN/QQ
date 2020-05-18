@@ -1,0 +1,1 @@
+controller中与javafx结合，这里不写
