@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  * @program: QQ_client
@@ -20,5 +21,7 @@ public class WarnPanelController {
         Text.setText(text);
     }
     public void exit(MouseEvent mouseEvent) {
+        Stage window = (Stage) exit.getScene().getWindow();
+        window.close();
     }
 }

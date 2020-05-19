@@ -21,6 +21,11 @@ public class UserSocketUtils {
         HeartPackageSender heartSender=new HeartPackageSender();
         heartSender.start();
     }
+    public static void removeSocket(String username){
+        if(socketMap.containsKey(username)){
+            socketMap.remove(username);
+        }
+    }
     public static Socket getSocket(String username) throws Exception {
         if(socketMap.containsKey(username)){
             return socketMap.get(username);

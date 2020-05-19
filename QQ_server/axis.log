@@ -1,0 +1,738 @@
+2020-05-19 21:27:09,838 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 21:27:09,921 83     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 21:27:09,921 83     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 21:27:09,922 84     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 21:27:09,922 84     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 21:27:09,924 86     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 21:27:09,970 132    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:27:09,970 132    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:27:09,970 132    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:27:09,970 132    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:27:11,160 1322   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:27:11,727 1889   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1947535201.
+2020-05-19 21:27:11,728 1890   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@74150761]
+2020-05-19 21:27:11,731 1893   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 21:27:11,796 1958   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 21:27:11,831 1993   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 21:27:11,836 1998   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,PASSWORD(?),?,?,?) 
+2020-05-19 21:27:11,838 2000   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), jd5521880(String), jiading.biz@outlook.com(String), 88a8c3b6f3db4f39ae2a478cb610255a(String), F(String)
+2020-05-19 21:43:20,584 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 21:43:20,665 81     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 21:43:20,665 81     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 21:43:20,666 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 21:43:20,666 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 21:43:20,667 83     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 21:43:20,715 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:43:20,715 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:43:20,715 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:43:20,715 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:43:21,862 1278   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:43:22,423 1839   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1313350525.
+2020-05-19 21:43:22,424 1840   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4e48237d]
+2020-05-19 21:43:22,426 1842   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 21:43:22,467 1883   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 21:43:22,496 1912   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 21:43:22,499 1915   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 21:43:22,500 1916   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), jd5521880(String), jiading.biz@outlook.com(String), 6dc3c85bee134eaa88bfd32ebbe94432(String), F(String)
+2020-05-19 21:43:22,509 1925   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 21:45:59,496 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 21:45:59,578 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 21:45:59,579 83     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 21:45:59,579 83     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 21:45:59,580 84     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 21:45:59,581 85     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 21:45:59,622 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:45:59,622 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:45:59,622 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:45:59,622 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:46:00,806 1310   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:46:01,434 1938   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 344021503.
+2020-05-19 21:46:01,439 1943   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@148159ff]
+2020-05-19 21:46:01,445 1949   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 21:46:01,527 2031   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 21:46:01,563 2067   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 21:46:01,566 2070   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 21:46:01,568 2072   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), jd5521880(String), jiading.biz@outlook.com(String), 790d3e18ef9b4014ac04fd17ec635979(String), F(String)
+2020-05-19 21:46:01,571 2075   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 21:51:32,288 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 21:51:32,363 75     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 21:51:32,363 75     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 21:51:32,363 75     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 21:51:32,364 76     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 21:51:32,365 77     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 21:51:32,409 121    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:51:32,410 122    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:51:32,410 122    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:51:32,410 122    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:51:33,535 1247   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:51:34,036 1748   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 42321965.
+2020-05-19 21:51:34,036 1748   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@285c82d]
+2020-05-19 21:51:34,038 1750   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 21:51:34,084 1796   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 21:51:34,114 1826   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 21:51:34,117 1829   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 21:51:34,118 1830   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), test(String), jiading.biz@outlook.com(String), add482952dff4142af12c98d349f0d1d(String), F(String)
+2020-05-19 21:51:34,127 1839   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 21:51:34,127 1839   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@285c82d]
+2020-05-19 21:53:37,031 124743 [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:53:37,031 124743 [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:53:37,031 124743 [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:53:37,031 124743 [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:53:37,036 124748 [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:53:37,057 124769 [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1857943459.
+2020-05-19 21:53:37,057 124769 [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6ebdf7a3]
+2020-05-19 21:53:37,063 124775 [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 21:53:37,064 124776 [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-19 21:53:37,067 124779 [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 21:59:11,417 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 21:59:11,498 81     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 21:59:11,498 81     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 21:59:11,498 81     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 21:59:11,499 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 21:59:11,500 83     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 21:59:11,542 125    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:11,542 125    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:11,542 125    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:11,542 125    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:12,666 1249   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:59:13,125 1708   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 894347330.
+2020-05-19 21:59:13,126 1709   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@354ea842]
+2020-05-19 21:59:13,128 1711   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 21:59:13,169 1752   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 21:59:13,207 1790   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 21:59:13,210 1793   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 21:59:13,211 1794   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), test(String), jiading.biz@outlook.com(String), 3a21db8818524137b265bb0e52b26f4f(String), F(String)
+2020-05-19 21:59:13,214 1797   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 21:59:13,214 1797   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@354ea842]
+2020-05-19 21:59:32,538 21121  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:32,539 21122  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:32,539 21122  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:32,539 21122  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 21:59:32,543 21126  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 21:59:32,559 21142  [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1972108648.
+2020-05-19 21:59:32,559 21142  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@758bfd68]
+2020-05-19 21:59:32,560 21143  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 21:59:32,561 21144  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-19 21:59:32,572 21155  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 21:59:32,572 21155  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==>  Preparing: update user set isInUse='T' where username=? 
+2020-05-19 21:59:32,572 21155  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==> Parameters: jiading(String)
+2020-05-19 21:59:32,582 21165  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - <==    Updates: 1
+2020-05-19 22:01:54,860 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 22:01:54,941 81     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 22:01:54,941 81     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 22:01:54,942 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 22:01:54,942 82     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 22:01:54,943 83     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 22:01:54,991 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:01:54,991 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:01:54,991 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:01:54,991 131    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:01:56,124 1264   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:01:56,587 1727   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1296636145.
+2020-05-19 22:01:56,588 1728   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d4918f1]
+2020-05-19 22:01:56,590 1730   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 22:01:56,635 1775   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: jiading(String)
+2020-05-19 22:01:56,669 1809   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 22:01:56,672 1812   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 22:01:56,674 1814   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: jiading(String), test(String), jiading.biz@outlook.com(String), 112623628c6d46538ff4e4e4e0572a76(String), F(String)
+2020-05-19 22:01:56,675 1815   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 22:01:56,676 1816   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d4918f1]
+2020-05-19 22:02:28,491 33631  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:02:28,491 33631  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:02:28,491 33631  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:02:28,491 33631  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:02:28,496 33636  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:02:28,515 33655  [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 340286853.
+2020-05-19 22:02:28,515 33655  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14485d85]
+2020-05-19 22:02:28,521 33661  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:02:28,522 33662  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-19 22:02:28,525 33665  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:02:28,526 33666  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==>  Preparing: update user set isInUse='T' where username=? 
+2020-05-19 22:02:28,526 33666  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==> Parameters: jiading(String)
+2020-05-19 22:02:28,535 33675  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - <==    Updates: 1
+2020-05-19 22:02:28,535 33675  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14485d85]
+2020-05-19 22:03:00,979 66119  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:00,981 66121  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:00,981 66121  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:00,981 66121  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:00,986 66126  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:03:01,004 66144  [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 13480106.
+2020-05-19 22:03:01,004 66144  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@cdb0aa]
+2020-05-19 22:03:01,005 66145  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:03:01,005 66145  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), jd5521880(String)
+2020-05-19 22:03:01,006 66146  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 0
+2020-05-19 22:03:08,492 73632  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,492 73632  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,492 73632  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,492 73632  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,494 73634  [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,495 73635  [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:03:08,495 73635  [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@cdb0aa]
+2020-05-19 22:03:08,496 73636  [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (13480106) attempted to return to the pool, discarding connection.
+2020-05-19 22:03:08,496 73636  [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14485d85]
+2020-05-19 22:03:08,497 73637  [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14485d85]
+2020-05-19 22:03:08,497 73637  [      Finalizer] DEBUG source.pooled.PooledDataSource  - Returned connection 340286853 to pool.
+2020-05-19 22:03:08,499 73639  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:03:08,499 73639  [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:03:08,514 73654  [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 1997013718.
+2020-05-19 22:03:08,514 73654  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@770802d6]
+2020-05-19 22:03:08,515 73655  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:03:08,516 73656  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-19 22:03:08,517 73657  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:03:08,518 73658  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:03:08,518 73658  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-19 22:03:08,532 73672  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:07:53,807 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 22:07:53,891 84     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 22:07:53,892 85     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 22:07:53,892 85     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 22:07:53,893 86     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 22:07:53,893 86     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 22:07:53,933 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:07:53,933 126    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:07:53,934 127    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:07:53,934 127    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:07:55,059 1252   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:07:55,524 1717   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1064168883.
+2020-05-19 22:07:55,524 1717   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3f6dedb3]
+2020-05-19 22:07:55,529 1722   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==>  Preparing: select username from user where username=? 
+2020-05-19 22:07:55,574 1767   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - ==> Parameters: test(String)
+2020-05-19 22:07:55,606 1799   [       Thread-1] DEBUG g.dao.UserDao.isUsernameExists  - <==      Total: 0
+2020-05-19 22:07:55,609 1802   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==>  Preparing: insert into user(username,password,email,code,isInUse)values(?,SHA1(?),?,?,?) 
+2020-05-19 22:07:55,610 1803   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - ==> Parameters: test(String), test(String), jd1004005214@stu.xjtu.edu.cn(String), a4f03e72667040418652c55945b843d4(String), F(String)
+2020-05-19 22:07:55,619 1812   [       Thread-1] DEBUG com.jiading.dao.UserDao.signUp  - <==    Updates: 1
+2020-05-19 22:07:55,619 1812   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3f6dedb3]
+2020-05-19 22:08:13,211 19404  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:13,211 19404  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:13,212 19405  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:13,212 19405  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:13,217 19410  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:08:13,232 19425  [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1840185434.
+2020-05-19 22:08:13,232 19425  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6daf005a]
+2020-05-19 22:08:13,238 19431  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:08:13,239 19432  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:08:13,242 19435  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:08:13,243 19436  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==>  Preparing: update user set isInUse='T' where username=? 
+2020-05-19 22:08:13,243 19436  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - ==> Parameters: test(String)
+2020-05-19 22:08:13,252 19445  [       Thread-1] DEBUG ng.dao.UserDao.changeCodeIntoT  - <==    Updates: 1
+2020-05-19 22:08:13,253 19446  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6daf005a]
+2020-05-19 22:08:27,226 33419  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:27,226 33419  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:27,226 33419  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:27,226 33419  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:08:27,230 33423  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:08:27,246 33439  [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 44026137.
+2020-05-19 22:08:27,246 33439  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29fc919]
+2020-05-19 22:08:27,246 33439  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:08:27,247 33440  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:08:27,248 33441  [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:08:27,249 33442  [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:08:27,249 33442  [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:08:27,251 33444  [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:09:43,405 109598 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:09:43,407 109600 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:09:43,407 109600 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:09:43,407 109600 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:09:43,411 109604 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:09:43,428 109621 [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 508311005.
+2020-05-19 22:09:43,429 109622 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e4c35dd]
+2020-05-19 22:09:43,429 109622 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:09:43,430 109623 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:09:43,432 109625 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:09:43,433 109626 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:09:43,434 109627 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:09:43,435 109628 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:11:27,151 213344 [       Thread-4] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:11:27,152 213345 [       Thread-4] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:11:27,152 213345 [       Thread-4] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:11:27,152 213345 [       Thread-4] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:11:27,156 213349 [       Thread-4] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:11:27,170 213363 [       Thread-4] DEBUG source.pooled.PooledDataSource  - Created connection 1008205193.
+2020-05-19 22:11:27,170 213363 [       Thread-4] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c17fd89]
+2020-05-19 22:11:27,171 213364 [       Thread-4] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:11:27,171 213364 [       Thread-4] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:11:27,173 213366 [       Thread-4] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:11:27,174 213367 [       Thread-4] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:11:27,174 213367 [       Thread-4] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:11:27,175 213368 [       Thread-4] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:15:28,661 454854 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:15:28,662 454855 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:15:28,662 454855 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:15:28,662 454855 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:15:28,666 454859 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:15:28,680 454873 [       Thread-5] DEBUG source.pooled.PooledDataSource  - Created connection 125664172.
+2020-05-19 22:15:28,680 454873 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@77d7bac]
+2020-05-19 22:15:28,680 454873 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:15:28,681 454874 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:15:28,683 454876 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:15:28,683 454876 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:15:28,683 454876 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:15:28,685 454878 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:16:57,265 543458 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:16:57,265 543458 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:16:57,265 543458 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:16:57,265 543458 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:16:57,269 543462 [       Thread-6] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:16:57,281 543474 [       Thread-6] DEBUG source.pooled.PooledDataSource  - Created connection 898291964.
+2020-05-19 22:16:57,282 543475 [       Thread-6] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@358ad8fc]
+2020-05-19 22:16:57,282 543475 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:16:57,282 543475 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:16:57,285 543478 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:16:57,285 543478 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:16:57,285 543478 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:16:57,286 543479 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:18:13,310 619503 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,311 619504 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,312 619505 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,312 619505 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,316 619509 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,317 619510 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:18:13,318 619511 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:18:13,318 619511 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@358ad8fc]
+2020-05-19 22:18:13,318 619511 [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (898291964) attempted to return to the pool, discarding connection.
+2020-05-19 22:18:13,322 619515 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,322 619515 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:18:13,322 619515 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@77d7bac]
+2020-05-19 22:18:13,322 619515 [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (125664172) attempted to return to the pool, discarding connection.
+2020-05-19 22:18:13,322 619515 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29fc919]
+2020-05-19 22:18:13,324 619517 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29fc919]
+2020-05-19 22:18:13,324 619517 [      Finalizer] DEBUG source.pooled.PooledDataSource  - Returned connection 44026137 to pool.
+2020-05-19 22:18:13,327 619520 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,328 619521 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:18:13,328 619521 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6daf005a]
+2020-05-19 22:18:13,328 619521 [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (1840185434) attempted to return to the pool, discarding connection.
+2020-05-19 22:18:13,331 619524 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,331 619524 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:18:13,331 619524 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c17fd89]
+2020-05-19 22:18:13,331 619524 [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (1008205193) attempted to return to the pool, discarding connection.
+2020-05-19 22:18:13,335 619528 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,335 619528 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Error resetting autocommit to true before closing the connection.  Cause: java.sql.SQLException: Error accessing PooledConnection. Connection is invalid.
+2020-05-19 22:18:13,335 619528 [      Finalizer] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e4c35dd]
+2020-05-19 22:18:13,335 619528 [      Finalizer] DEBUG source.pooled.PooledDataSource  - A bad connection (508311005) attempted to return to the pool, discarding connection.
+2020-05-19 22:18:13,336 619529 [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:18:13,338 619531 [       Thread-7] DEBUG source.pooled.PooledDataSource  - Created connection 570874352.
+2020-05-19 22:18:13,339 619532 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2206d9f0]
+2020-05-19 22:18:13,339 619532 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:18:13,340 619533 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:18:13,342 619535 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:18:13,342 619535 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:18:13,343 619536 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:18:13,344 619537 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:20:04,384 730577 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:20:04,385 730578 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:20:04,385 730578 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:20:04,385 730578 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:20:04,388 730581 [       Thread-8] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:20:04,400 730593 [       Thread-8] DEBUG source.pooled.PooledDataSource  - Created connection 706364264.
+2020-05-19 22:20:04,400 730593 [       Thread-8] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2a1a4368]
+2020-05-19 22:20:04,400 730593 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:20:04,401 730594 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:20:04,402 730595 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:20:04,403 730596 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:20:04,403 730596 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:20:04,405 730598 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:21:30,482 816675 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:30,482 816675 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:30,482 816675 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:30,483 816676 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:30,486 816679 [      Thread-10] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:21:30,497 816690 [      Thread-10] DEBUG source.pooled.PooledDataSource  - Created connection 330118155.
+2020-05-19 22:21:30,497 816690 [      Thread-10] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@13ad340b]
+2020-05-19 22:21:30,498 816691 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:21:30,498 816691 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:21:30,499 816692 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:21:30,500 816693 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:21:30,500 816693 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:21:30,501 816694 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:21:55,008 841201 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:55,008 841201 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:55,008 841201 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:21:55,008 841201 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:29:57,766 1323959 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:29:57,767 1323960 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:29:57,767 1323960 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:29:57,767 1323960 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:29:57,771 1323964 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:29:57,783 1323976 [      Thread-11] DEBUG source.pooled.PooledDataSource  - Created connection 1261989185.
+2020-05-19 22:29:57,784 1323977 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4b386d41]
+2020-05-19 22:29:57,784 1323977 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:29:57,784 1323977 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:29:57,786 1323979 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:29:57,787 1323980 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:29:57,787 1323980 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:29:57,788 1323981 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:30:28,797 1354990 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:30:28,798 1354991 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:30:28,798 1354991 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:30:28,798 1354991 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:32:51,016 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 22:32:51,091 75     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 22:32:51,091 75     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 22:32:51,092 76     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 22:32:51,092 76     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 22:32:51,093 77     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 22:32:51,131 115    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:32:51,131 115    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:32:51,131 115    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:32:51,131 115    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:32:51,222 206    [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:32:52,761 1745   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1590501955.
+2020-05-19 22:32:52,761 1745   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5ecd2243]
+2020-05-19 22:32:52,763 1747   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 22:32:52,817 1801   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 22:32:52,862 1846   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 22:32:52,872 1856   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 22:32:52,873 1857   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 22:32:52,874 1858   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 22:33:08,632 17616  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:33:08,633 17617  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:33:08,633 17617  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:33:08,633 17617  [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 22:33:08,638 17622  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 22:33:08,652 17636  [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1410133689.
+2020-05-19 22:33:08,652 17636  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@540ceeb9]
+2020-05-19 22:33:08,653 17637  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==>  Preparing: insert into friends values(?,?) 
+2020-05-19 22:33:08,654 17638  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==> Parameters: test(String), jiading(String)
+2020-05-19 22:33:08,664 17648  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - <==    Updates: 1
+2020-05-19 22:33:08,665 17649  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@540ceeb9]
+2020-05-19 22:33:08,670 17654  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==>  Preparing: insert into friends values(?,?) 
+2020-05-19 22:33:08,671 17655  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==> Parameters: jiading(String), test(String)
+2020-05-19 22:33:08,672 17656  [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - <==    Updates: 1
+2020-05-19 22:33:08,672 17656  [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@540ceeb9]
+2020-05-19 23:21:16,033 2905017 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:21:16,034 2905018 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:21:16,034 2905018 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:21:16,034 2905018 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:21:16,039 2905023 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 23:21:16,057 2905041 [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 120914551.
+2020-05-19 23:21:16,057 2905041 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7350277]
+2020-05-19 23:21:16,058 2905042 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 23:21:16,058 2905042 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 23:21:16,060 2905044 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 23:21:16,061 2905045 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 23:21:16,062 2905046 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 23:21:16,071 2905055 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-19 23:23:19,084 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-19 23:23:19,156 72     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-19 23:23:19,156 72     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-19 23:23:19,157 73     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-19 23:23:19,158 74     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-19 23:23:19,158 74     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-19 23:23:19,198 114    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:19,198 114    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:19,198 114    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:19,198 114    [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:19,281 197    [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 23:23:20,794 1710   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 218489865.
+2020-05-19 23:23:20,795 1711   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d05e409]
+2020-05-19 23:23:20,797 1713   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 23:23:20,837 1753   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 23:23:20,870 1786   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 23:23:20,874 1790   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 23:23:20,875 1791   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 23:23:20,881 1797   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 0
+2020-05-19 23:23:27,680 8596   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:27,680 8596   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:27,680 8596   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:27,680 8596   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:23:27,684 8600   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 23:23:27,702 8618   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 924755971.
+2020-05-19 23:23:27,702 8618   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@371ea803]
+2020-05-19 23:23:27,703 8619   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==>  Preparing: insert into friends values(?,?) 
+2020-05-19 23:23:27,704 8620   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==> Parameters: test(String), jiading(String)
+2020-05-19 23:23:27,715 8631   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - <==    Updates: 1
+2020-05-19 23:23:27,715 8631   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@371ea803]
+2020-05-19 23:23:27,718 8634   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==>  Preparing: insert into friends values(?,?) 
+2020-05-19 23:23:27,718 8634   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - ==> Parameters: jiading(String), test(String)
+2020-05-19 23:23:27,720 8636   [       Thread-1] DEBUG .jiading.dao.UserDao.addFriend  - <==    Updates: 1
+2020-05-19 23:23:27,720 8636   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@371ea803]
+2020-05-19 23:27:21,736 242652 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:27:21,738 242654 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:27:21,738 242654 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:27:21,738 242654 [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-19 23:27:21,743 242659 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-19 23:27:21,759 242675 [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 767509825.
+2020-05-19 23:27:21,759 242675 [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2dbf4541]
+2020-05-19 23:27:21,760 242676 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-19 23:27:21,760 242676 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-19 23:27:21,762 242678 [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-19 23:27:21,763 242679 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-19 23:27:21,763 242679 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-19 23:27:21,766 242682 [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:42:18,069 0      [       Thread-2] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-20 00:42:18,157 88     [       Thread-2] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-20 00:42:18,157 88     [       Thread-2] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-20 00:42:18,157 88     [       Thread-2] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-20 00:42:18,158 89     [       Thread-2] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-20 00:42:18,158 89     [       Thread-2] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-20 00:42:18,200 131    [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:18,200 131    [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:18,200 131    [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:18,200 131    [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:18,375 306    [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:42:19,589 1520   [       Thread-2] DEBUG source.pooled.PooledDataSource  - Created connection 1509371205.
+2020-05-20 00:42:19,589 1520   [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@59f72d45]
+2020-05-20 00:42:19,591 1522   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:42:19,624 1555   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), text(String)
+2020-05-20 00:42:19,658 1589   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 0
+2020-05-20 00:42:27,791 9722   [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:27,791 9722   [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:27,791 9722   [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:27,791 9722   [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:27,795 9726   [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:42:27,808 9739   [       Thread-2] DEBUG source.pooled.PooledDataSource  - Created connection 1871760240.
+2020-05-20 00:42:27,808 9739   [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f90cb70]
+2020-05-20 00:42:27,809 9740   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:42:27,809 9740   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), jd5521880(String)
+2020-05-20 00:42:27,815 9746   [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 0
+2020-05-20 00:42:44,304 26235  [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:44,305 26236  [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:44,305 26236  [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:44,305 26236  [       Thread-2] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:42:44,308 26239  [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:42:44,321 26252  [       Thread-2] DEBUG source.pooled.PooledDataSource  - Created connection 1437040938.
+2020-05-20 00:42:44,321 26252  [       Thread-2] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@55a7812a]
+2020-05-20 00:42:44,321 26252  [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:42:44,321 26252  [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:42:44,324 26255  [       Thread-2] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:42:44,326 26257  [       Thread-2] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:42:44,326 26257  [       Thread-2] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:42:44,334 26265  [       Thread-2] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:43:02,331 44262  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:43:02,334 44265  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:43:02,334 44265  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:43:02,334 44265  [       Thread-3] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:43:02,338 44269  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:43:02,352 44283  [       Thread-3] DEBUG source.pooled.PooledDataSource  - Created connection 1977694343.
+2020-05-20 00:43:02,353 44284  [       Thread-3] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75e13887]
+2020-05-20 00:43:02,353 44284  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:43:02,354 44285  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 00:43:02,355 44286  [       Thread-3] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:43:02,356 44287  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:43:02,356 44287  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 00:43:02,358 44289  [       Thread-3] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:51:32,446 554377 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:51:32,446 554377 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:51:32,446 554377 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:51:32,446 554377 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:51:32,450 554381 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:51:32,462 554393 [       Thread-5] DEBUG source.pooled.PooledDataSource  - Created connection 1121997756.
+2020-05-20 00:51:32,462 554393 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@42e053bc]
+2020-05-20 00:51:32,463 554394 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:51:32,463 554394 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:51:32,465 554396 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:51:32,465 554396 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:51:32,465 554396 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:51:32,467 554398 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:52:07,511 589442 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:07,511 589442 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:07,511 589442 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:07,511 589442 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:07,515 589446 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:52:07,526 589457 [       Thread-5] DEBUG source.pooled.PooledDataSource  - Created connection 37231608.
+2020-05-20 00:52:07,526 589457 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2381bf8]
+2020-05-20 00:52:07,526 589457 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:52:07,527 589458 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:52:07,528 589459 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:52:07,529 589460 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:52:07,529 589460 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:52:07,531 589462 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:52:26,696 608627 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:26,696 608627 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:26,696 608627 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:26,696 608627 [       Thread-6] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:26,699 608630 [       Thread-6] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:52:26,709 608640 [       Thread-6] DEBUG source.pooled.PooledDataSource  - Created connection 412326908.
+2020-05-20 00:52:26,709 608640 [       Thread-6] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@18939bfc]
+2020-05-20 00:52:26,710 608641 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:52:26,710 608641 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 00:52:26,712 608643 [       Thread-6] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:52:26,712 608643 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:52:26,712 608643 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 00:52:26,714 608645 [       Thread-6] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:52:31,538 613469 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:31,538 613469 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:31,538 613469 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:31,538 613469 [       Thread-5] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:52:31,542 613473 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:52:31,552 613483 [       Thread-5] DEBUG source.pooled.PooledDataSource  - Created connection 900118572.
+2020-05-20 00:52:31,553 613484 [       Thread-5] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@35a6b82c]
+2020-05-20 00:52:31,553 613484 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:52:31,553 613484 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:52:31,555 613486 [       Thread-5] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:52:31,555 613486 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:52:31,555 613486 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:52:31,557 613488 [       Thread-5] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:56:14,695 836626 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:14,695 836626 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:14,695 836626 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:14,695 836626 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:14,698 836629 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:56:14,709 836640 [       Thread-7] DEBUG source.pooled.PooledDataSource  - Created connection 530283623.
+2020-05-20 00:56:14,709 836640 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1f9b7c67]
+2020-05-20 00:56:14,710 836641 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:56:14,710 836641 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:56:14,712 836643 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:56:14,712 836643 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:56:14,713 836644 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:56:14,716 836647 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:56:27,811 849742 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:27,812 849743 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:27,812 849743 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:27,812 849743 [       Thread-8] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:27,815 849746 [       Thread-8] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:56:27,825 849756 [       Thread-8] DEBUG source.pooled.PooledDataSource  - Created connection 187980389.
+2020-05-20 00:56:27,825 849756 [       Thread-8] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@b345a65]
+2020-05-20 00:56:27,825 849756 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:56:27,825 849756 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 00:56:27,826 849757 [       Thread-8] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:56:27,826 849757 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:56:27,827 849758 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 00:56:27,829 849760 [       Thread-8] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:56:31,708 853639 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:31,708 853639 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:31,708 853639 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:31,708 853639 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:31,711 853642 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 00:56:31,721 853652 [       Thread-7] DEBUG source.pooled.PooledDataSource  - Created connection 1344171393.
+2020-05-20 00:56:31,721 853652 [       Thread-7] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@501e6d81]
+2020-05-20 00:56:31,721 853652 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 00:56:31,721 853652 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 00:56:31,723 853654 [       Thread-7] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 00:56:31,723 853654 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 00:56:31,723 853654 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 00:56:31,725 853656 [       Thread-7] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 00:56:46,221 868152 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:46,222 868153 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:46,222 868153 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 00:56:46,222 868153 [       Thread-7] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:08,657 1190588 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:08,658 1190589 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:08,658 1190589 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:08,658 1190589 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:08,661 1190592 [       Thread-9] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:02:08,673 1190604 [       Thread-9] DEBUG source.pooled.PooledDataSource  - Created connection 1737835621.
+2020-05-20 01:02:08,673 1190604 [       Thread-9] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@67954465]
+2020-05-20 01:02:08,673 1190604 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:02:08,674 1190605 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 01:02:08,675 1190606 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:02:08,675 1190606 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:02:08,675 1190606 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 01:02:08,677 1190608 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:02:18,500 1200431 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:18,500 1200431 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:18,500 1200431 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:18,500 1200431 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:18,503 1200434 [      Thread-10] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:02:18,512 1200443 [      Thread-10] DEBUG source.pooled.PooledDataSource  - Created connection 1303997704.
+2020-05-20 01:02:18,512 1200443 [      Thread-10] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4db96d08]
+2020-05-20 01:02:18,512 1200443 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:02:18,513 1200444 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 01:02:18,514 1200445 [      Thread-10] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:02:18,514 1200445 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:02:18,514 1200445 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 01:02:18,516 1200447 [      Thread-10] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:02:21,669 1203600 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:21,669 1203600 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:21,669 1203600 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:21,669 1203600 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:21,672 1203603 [       Thread-9] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:02:21,680 1203611 [       Thread-9] DEBUG source.pooled.PooledDataSource  - Created connection 616758527.
+2020-05-20 01:02:21,681 1203612 [       Thread-9] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@24c2fcff]
+2020-05-20 01:02:21,681 1203612 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:02:21,681 1203612 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 01:02:21,714 1203645 [       Thread-9] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:02:21,715 1203646 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:02:21,715 1203646 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 01:02:21,716 1203647 [       Thread-9] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:02:38,691 1220622 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:38,692 1220623 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:38,692 1220623 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:38,692 1220623 [       Thread-9] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:52,531 1234462 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:52,531 1234462 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:52,531 1234462 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:02:52,531 1234462 [      Thread-10] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:39,401 1701332 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:39,402 1701333 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:39,402 1701333 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:39,402 1701333 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:39,405 1701336 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:10:39,416 1701347 [      Thread-11] DEBUG source.pooled.PooledDataSource  - Created connection 2018605021.
+2020-05-20 01:10:39,416 1701347 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@785177dd]
+2020-05-20 01:10:39,417 1701348 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:10:39,417 1701348 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 01:10:39,419 1701350 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:10:39,419 1701350 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:10:39,419 1701350 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 01:10:39,421 1701352 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:10:45,832 1707763 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:45,833 1707764 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:45,833 1707764 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:45,833 1707764 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:45,836 1707767 [      Thread-12] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:10:45,846 1707777 [      Thread-12] DEBUG source.pooled.PooledDataSource  - Created connection 272169067.
+2020-05-20 01:10:45,847 1707778 [      Thread-12] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1038f86b]
+2020-05-20 01:10:45,847 1707778 [      Thread-12] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:10:45,848 1707779 [      Thread-12] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 01:10:45,849 1707780 [      Thread-12] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:10:45,849 1707780 [      Thread-12] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:10:45,849 1707780 [      Thread-12] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 01:10:45,851 1707782 [      Thread-12] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:10:48,910 1710841 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:48,910 1710841 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:48,910 1710841 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:48,910 1710841 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:10:48,913 1710844 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:10:48,921 1710852 [      Thread-11] DEBUG source.pooled.PooledDataSource  - Created connection 1103297975.
+2020-05-20 01:10:48,922 1710853 [      Thread-11] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41c2fdb7]
+2020-05-20 01:10:48,922 1710853 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:10:48,922 1710853 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: jiading(String), test(String)
+2020-05-20 01:10:48,923 1710854 [      Thread-11] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:10:48,923 1710854 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:10:48,924 1710855 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: jiading(String)
+2020-05-20 01:10:48,925 1710856 [      Thread-11] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:11:02,352 1724283 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:02,353 1724284 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:02,353 1724284 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:02,353 1724284 [      Thread-12] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:18,941 1740872 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:18,941 1740872 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:18,941 1740872 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:18,942 1740873 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:26,449 1748380 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:26,449 1748380 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:26,449 1748380 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:11:26,449 1748380 [      Thread-11] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:39,810 0      [       Thread-1] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-20 01:38:39,870 60     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-20 01:38:39,870 60     [       Thread-1] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-20 01:38:39,871 61     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-20 01:38:39,871 61     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-20 01:38:39,872 62     [       Thread-1] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-20 01:38:39,905 95     [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:39,905 95     [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:39,906 96     [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:39,906 96     [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:39,978 168    [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:38:41,131 1321   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1938997901.
+2020-05-20 01:38:41,132 1322   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7392c28d]
+2020-05-20 01:38:41,134 1324   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:38:41,165 1355   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 01:38:41,190 1380   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:38:41,193 1383   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:38:41,194 1384   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 01:38:41,196 1386   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1
+2020-05-20 01:38:46,006 6196   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:46,006 6196   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:46,006 6196   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:46,006 6196   [       Thread-1] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-20 01:38:46,010 6200   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2020-05-20 01:38:46,022 6212   [       Thread-1] DEBUG source.pooled.PooledDataSource  - Created connection 1406762642.
+2020-05-20 01:38:46,022 6212   [       Thread-1] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@53d97e92]
+2020-05-20 01:38:46,022 6212   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==>  Preparing: select * from user where username=? and password=SHA1(?) 
+2020-05-20 01:38:46,023 6213   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - ==> Parameters: test(String), test(String)
+2020-05-20 01:38:46,029 6219   [       Thread-1] DEBUG com.jiading.dao.UserDao.signIn  - <==      Total: 1
+2020-05-20 01:38:46,029 6219   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==>  Preparing: select friendUsername from friends where myUsername=? 
+2020-05-20 01:38:46,029 6219   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - ==> Parameters: test(String)
+2020-05-20 01:38:46,032 6222   [       Thread-1] DEBUG iading.dao.UserDao.findFriends  - <==      Total: 1

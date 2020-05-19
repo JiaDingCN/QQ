@@ -14,6 +14,8 @@
                 <TableColumn fx:id="statusColumn" prefWidth="86.39998474121094" text="在线状态" />
             </columns>
         </TableView>
-      <Button fx:id="exitButton" layoutX="196.0" layoutY="610.0" mnemonicParsing="false" text="退出" onMouseClicked="#exit"/>
+      <Button fx:id="exitButton" layoutX="196.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
+      <Button fx:id="addFriendButton" layoutX="14.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#addFriend" text="添加好友" />
+      <Button fx:id="refreshFriendsListButton" layoutX="97.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#refreshFriends" text="刷新好友列表" />
     </children>
 </AnchorPane>

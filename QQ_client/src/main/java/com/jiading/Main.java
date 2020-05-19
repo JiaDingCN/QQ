@@ -1,5 +1,7 @@
 package com.jiading;
 
+import com.jiading.controller.SignPanelController;
+import com.jiading.service.SocketService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,6 +22,8 @@ public class Main extends Application {
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("登录或注册");
         primaryStage.setScene(new Scene(root, 640, 430));
+        /*SignPanelController controller = fxmlLoader.getController();
+        controller.start();*/
         primaryStage.show();
     }
 

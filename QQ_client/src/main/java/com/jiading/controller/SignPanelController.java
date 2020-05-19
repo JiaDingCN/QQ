@@ -1,5 +1,6 @@
 package com.jiading.controller;
 
+import com.jiading.service.SocketService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,6 +22,10 @@ public class SignPanelController {
     Button SignUpButton;
     @FXML
     Button SignInButton;
+    /*public void start(){
+        SocketService socketService=new SocketService("192.168.1.4",6768);
+        socketService.start();
+    }*/
     public void toSignUpPanel(MouseEvent mouseEvent) throws IOException {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getClassLoader().getResource("SignUpPanel.fxml"));
         Parent root = fxmlLoader.load();

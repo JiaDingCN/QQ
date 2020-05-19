@@ -1,5 +1,7 @@
 package com.jiading.service.impl;
 
+
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,15 +14,19 @@ import java.net.Socket;
  * @author: JiaDing
  * @create: 2020-05-10 23:36
  **/
+
 public class SocketService extends Thread{
-    ServerSocket server=null;
+    ServerSocket server;
+
+
+
     public SocketService(int port){
-        try{
-            server=new ServerSocket(port);
-        }catch (IOException e){
-            e.printStackTrace();
+            try{
+                server=new ServerSocket(port);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
-    }
     //接受消息
     @Override
     public void run(){

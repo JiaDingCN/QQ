@@ -9,5 +9,6 @@
         <module name="QQ_client" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

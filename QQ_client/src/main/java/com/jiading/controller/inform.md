@@ -1,1 +1,1 @@
-controller中与javafx结合，这里不写
+完成添加好友部分代码

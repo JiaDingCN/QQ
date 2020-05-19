@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.net.SocketException;
+import java.rmi.server.ExportException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,6 +28,7 @@ import java.util.List;
  **/
 public class JsonProcessService extends Thread {
     Socket socket;
+    String username=null;
 
     public JsonProcessService(Socket socket) {
         //通过socket对象可以获得输出流，用来写数据
@@ -48,20 +51,34 @@ public class JsonProcessService extends Thread {
         //读取数据
         int len = 0;
         byte[] buf = new byte[1048576];
-
         while (true) {
             try {
                 if (!((len = socket.getInputStream().read(buf)) != -1)) break;
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
+                if(username!=null){
+                    UserSocketUtils.removeSocket(username);
+                }
+                return;
             }
             //解析读取到的json文件
             String jsonFromByte = new String(buf, 0, len);
             ObjectMapper mapper = new ObjectMapper();
-            UserService service = new UserServiceImpl();
+            UserService service = null;
+            try {
+                service = new UserServiceImpl();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             try {
                 InfoUser user = mapper.readValue(jsonFromByte, InfoUser.class);
+
+                //onlyForDebug
+                System.out.println(user);
+
+
                 //将该socket保存到map中
+                username=user.getUsername();
                 UserSocketUtils.addSocket(user.getUsername(), socket);
                 //处理该数据包
                 if (user.getInfoType().equals(InfoUser.InfoTypes.HEART.toString())) {
@@ -84,12 +101,15 @@ public class JsonProcessService extends Thread {
                     if (UserSocketUtils.isOnline(user.getToUsername())) {
                         InfoUser toInfo = new InfoUser();
                         toInfo.setInfoType(InfoUser.InfoTypes.FRIENDADDED.toString());
+                        toInfo.setUsername(user.getUsername());
                         Socket toSocket = UserSocketUtils.getSocket(user.getToUsername());
                         PackageSender.sendPackage(toSocket, toInfo);
                         info.setChatInfo(InfoUser.stateCodes.NEW_FRIEND_ONLINE.toString());
                     } else {
                         info.setChatInfo(InfoUser.stateCodes.NEW_FRIEND_OFFLINE.toString());
                     }
+                    info.setInfoType(InfoUser.InfoTypes.FRIENDADDED.toString());
+                    info.setToUsername(user.getToUsername());
                     PackageSender.sendPackage(socket, info);
                 } else {
                     //注册或者登陆
@@ -103,10 +123,15 @@ public class JsonProcessService extends Thread {
                             //登录成功了，返回好友列表
                             List<String> friends = service.findFriends(userForBackUse);
                             StringBuilder builder = new StringBuilder();
-                            builder.append(InfoUser.stateCodes.SIGNINSUCCESS.toString() + ",");
+                            builder.append(InfoUser.stateCodes.SIGNINSUCCESS.toString() + ";");
                             Iterator<String> iterator = friends.iterator();
                             while (iterator.hasNext()) {
-                                builder.append(iterator.next() + ",");
+                                String friendUsername=iterator.next();
+                                if(UserSocketUtils.isOnline(friendUsername)){
+                                    builder.append( friendUsername+",T;");
+                                }else{
+                                    builder.append(friendUsername+",F;");
+                                }
                             }
                             backInfo.setChatInfo(builder.toString());
                         } else {
@@ -120,12 +145,14 @@ public class JsonProcessService extends Thread {
                             //生成注册码，发送邮件
                             String uuid = UuidUtil.getUuid();
                             fromInfoUserForSignUp.setCode(uuid);
+                            fromInfoUserForSignUp.setIsInUse("F");
                             boolean flag = service.signUp(fromInfoUserForSignUp);
                             InfoUser info = new InfoUser();
+                            info.setInfoType(InfoUser.InfoTypes.SIGNUP.toString());
                             if (flag) {
                                 MailUtils.sendCode(fromInfoUserForSignUp.getEmail(), uuid);
                                 info.setChatInfo(InfoUser.stateCodes.CODEASKED.toString());
-
+                                info.setInfoType(InfoUser.InfoTypes.SIGNUP.toString());
                             } else {
                                 info.setChatInfo(InfoUser.stateCodes.SIGNUPFALL_USERNAME_ALREADY_EXISTES.toString());
                             }
@@ -133,6 +160,7 @@ public class JsonProcessService extends Thread {
                         } else {
                             boolean flag = service.verifyCode(fromInfoUserForSignUp);
                             InfoUser info = new InfoUser();
+                            info.setInfoType(InfoUser.InfoTypes.SIGNUP.toString());
                             if (flag) {
                                 info.setChatInfo(InfoUser.stateCodes.SIGNUUPSUCCESS.toString());
                             } else {
@@ -148,6 +176,7 @@ public class JsonProcessService extends Thread {
                 e.printStackTrace();
             }
         }
-
+        //断开连接
+        UserSocketUtils.removeSocket(username);
     }
 }
