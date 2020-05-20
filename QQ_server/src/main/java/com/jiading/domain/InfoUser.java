@@ -18,7 +18,7 @@ package com.jiading.domain;
  */
 public class InfoUser {
     public enum InfoTypes {
-        SIGNUP, SIGNIN, CHAT, HEART,FRIENDADDED,ADDFRIEND;
+        SIGNUP, SIGNIN, CHAT, HEART,FRIENDADDED,ADDFRIEND,SENDFILE;
     }
 
     public String getInfoType() {

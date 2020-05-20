@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jiading.controller.ReceivePanelController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="39.0" layoutY="35.0" text="您收到了来自xxx的文件:" />
+      <Label layoutX="65.0" layoutY="116.0" text="文件夹路径：" />
+      <Label fx:id="pathLabel" layoutX="158.0" layoutY="116.0" text="path" />
+      <Button fx:id="chooseFolder" layoutX="393.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#chooseFolder" text="选择" />
+      <Button fx:id="receiveButton" layoutX="121.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#receive" text="接收" />
+      <Button fx:id="exitButton" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
+      <Label fx:id="processLabel" layoutX="177.0" layoutY="200.0" prefHeight="15.0" prefWidth="240.0" text="进度条" />
+   </children>
+</AnchorPane>

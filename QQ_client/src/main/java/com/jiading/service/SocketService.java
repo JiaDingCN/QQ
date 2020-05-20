@@ -21,9 +21,12 @@ import java.util.Scanner;
  **/
 public class SocketService extends Thread {
     //定义一个Socket对象
-    Socket socket = null;
+    static Socket socket = null;
     ObjectMapper mapper=new ObjectMapper();
 
+    public static Socket getSocket(){
+        return socket;
+    }
     public SocketService(String host, int port) {
         try {
             //需要服务器的IP地址和端口号，才能获得正确的Socket对象

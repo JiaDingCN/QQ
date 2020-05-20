@@ -44,6 +44,8 @@ public class MainPanelController {
             Button addFriendButton;
     @FXML
             Button refreshFriendsListButton;
+    @FXML
+            Button fileSenderButton;
     String username=null;
     String password=null;
     String friendsString = null;
@@ -113,6 +115,17 @@ public class MainPanelController {
         }
         InfoUser receivedUser=PackageList.getReceivedPackage();
         renewData(receivedUser.getChatInfo());
+    }
+
+    public void sendFile(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getClassLoader().getResource("SendFilePanel.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage newStage=new Stage();
+        newStage.setTitle("发送文件");
+        newStage.setScene(new Scene(root, 640, 430));
+        SendFilePanelController controller=fxmlLoader.getController();
+        controller.setInfo(username,username);
+        newStage.show();
     }
 
     class TableRowController extends TableRow<Friend> {

@@ -4,14 +4,17 @@ import com.jiading.domain.Friend;
 import com.jiading.domain.InfoUser;
 import com.jiading.utils.PackageList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -32,6 +35,8 @@ public class ChatPanelController {
     Button exitButton;
     @FXML
     Label chatInfoText;
+    @FXML
+            Button fileSenderButton;
     Friend toChat;
     String myUsername;
     StringBuilder builder = new StringBuilder();
@@ -75,6 +80,17 @@ public class ChatPanelController {
     public void exit(MouseEvent mouseEvent) {
         Stage window = (Stage) exitButton.getScene().getWindow();
         window.close();
+    }
+
+    public void sendFile(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getClassLoader().getResource("SendFilePanel.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage newStage=new Stage();
+        newStage.setTitle("发送文件");
+        newStage.setScene(new Scene(root, 640, 430));
+        SendFilePanelController controller=fxmlLoader.getController();
+        controller.setInfo(myUsername,toChat.getUsername());
+        newStage.show();
     }
 
     class Listen extends Thread {

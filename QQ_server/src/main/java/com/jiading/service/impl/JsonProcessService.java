@@ -10,9 +10,7 @@ import com.jiading.utils.UserSocketUtils;
 import com.jiading.utils.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
@@ -29,7 +27,10 @@ import java.util.List;
  **/
 public class JsonProcessService extends Thread {
     Socket socket;
-    String username=null;
+    String username = null;
+
+    //only for debug
+    String fileFolder = "E:\\testSocket\\";
 
     public JsonProcessService(Socket socket) {
         //通过socket对象可以获得输出流，用来写数据
@@ -51,13 +52,13 @@ public class JsonProcessService extends Thread {
     public void run() {
         //读取数据
         int len = 0;
-        byte[] buf = new byte[1048576];
+        byte[] buf = new byte[1024];
         while (true) {
             try {
                 if (!((len = socket.getInputStream().read(buf)) != -1)) break;
             } catch (Exception e) {
                 e.printStackTrace();
-                if(username!=null){
+                if (username != null) {
                     UserSocketUtils.removeSocket(username);
                 }
                 return;
@@ -79,11 +80,28 @@ public class JsonProcessService extends Thread {
 
 
                 //将该socket保存到map中
-                username=user.getUsername();
+                username = user.getUsername();
                 UserSocketUtils.addSocket(user.getUsername(), socket);
                 //处理该数据包
                 if (user.getInfoType().equals(InfoUser.InfoTypes.HEART.toString())) {
                     ;
+                } else if (user.getInfoType().equals(InfoUser.InfoTypes.SENDFILE.toString())) {
+                    String path=fileFolder+user.getCode();
+                    Integer numbersOfPackages=Integer.valueOf(user.getChatInfo());
+                    File file=new File(path);
+                    if(file.exists()){
+                        file.delete();
+                    }
+                    file.createNewFile();
+                    FileOutputStream fos=new FileOutputStream(file);
+                    DataInputStream dis=new DataInputStream(socket.getInputStream());
+                    Integer length=0;
+                    for(int i=0;i<numbersOfPackages;i++){
+                        length=dis.read(buf,0,buf.length);
+                        fos.write(buf,0,length);
+                        fos.flush();
+                    }
+                    fos.close();
                 } else if (user.getInfoType().equals(InfoUser.InfoTypes.CHAT.toString())) {
                     //默认能发送数据包的就是在线的，这个在前台控制
                     Socket toSocket = UserSocketUtils.getSocket(user.getToUsername());
@@ -127,11 +145,11 @@ public class JsonProcessService extends Thread {
                             builder.append(InfoUser.stateCodes.SIGNINSUCCESS.toString() + ";");
                             Iterator<String> iterator = friends.iterator();
                             while (iterator.hasNext()) {
-                                String friendUsername=iterator.next();
-                                if(UserSocketUtils.isOnline(friendUsername)){
-                                    builder.append( friendUsername+",T;");
-                                }else{
-                                    builder.append(friendUsername+",F;");
+                                String friendUsername = iterator.next();
+                                if (UserSocketUtils.isOnline(friendUsername)) {
+                                    builder.append(friendUsername + ",T;");
+                                } else {
+                                    builder.append(friendUsername + ",F;");
                                 }
                             }
                             backInfo.setChatInfo(builder.toString());
