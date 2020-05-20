@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
@@ -47,7 +48,7 @@ public class SocketService extends Thread {
             int len = 0;
             while ((len = s.read(buf)) != -1) {
                 //将Json转为InfoUser对象
-                InfoUser receivedUser=mapper.readValue(new String(buf, 0, len),InfoUser.class);
+                InfoUser receivedUser=mapper.readValue(new String(buf, 0, len, StandardCharsets.UTF_8),InfoUser.class);
 
                 //onlyForDebug
                 System.out.println(receivedUser);
@@ -84,7 +85,8 @@ public class SocketService extends Thread {
                 while(true){
                  if(PackageList.hasPackagesToSend()){
                      InfoUser toSendUser=PackageList.getPackagesToSend();
-                     os.write(mapper.writeValueAsBytes(toSendUser));
+                     String temp = mapper.writeValueAsString(toSendUser);
+                     os.write(temp.getBytes(StandardCharsets.UTF_8));
                      os.flush();
                  }else{
                      //休息500毫秒

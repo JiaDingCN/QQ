@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.SocketException;
+import java.nio.charset.StandardCharsets;
 import java.rmi.server.ExportException;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -62,7 +63,7 @@ public class JsonProcessService extends Thread {
                 return;
             }
             //解析读取到的json文件
-            String jsonFromByte = new String(buf, 0, len);
+            String jsonFromByte = new String(buf, 0, len, StandardCharsets.UTF_8);
             ObjectMapper mapper = new ObjectMapper();
             UserService service = null;
             try {
