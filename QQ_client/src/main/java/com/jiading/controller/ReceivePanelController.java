@@ -29,15 +29,19 @@ public class ReceivePanelController {
     Button receiveButton;
     @FXML
     Button exitButton;
-    @FXML
-    Label processLabel;
     File file;
     File folder;
+    String toUsername;
 
-    public void setFile(File file) {
+    public void setInfo(File file,String toUsername) {
         this.file = file;
+        this.toUsername=toUsername;
     }
 
+    @FXML
+    public void initialize(){
+        titleLabel.setText("您收到了来自"+toUsername+"的文件:");
+    }
     public void chooseFolder(MouseEvent mouseEvent) throws IOException {
         DirectoryChooser fileChooser = new DirectoryChooser();
         fileChooser.setTitle("选择要存放文件的文件夹");

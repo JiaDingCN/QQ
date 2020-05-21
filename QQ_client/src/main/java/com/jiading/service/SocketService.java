@@ -81,17 +81,18 @@ public class SocketService extends Thread {
                     FileOutputStream fos = new FileOutputStream(file);
                     DataInputStream dis = new DataInputStream(s);
                     int length = 0;
+                    int sumLength = 0;
                     int numbersOfPackages = Integer.valueOf(receivedUser.getChatInfo());
                     System.out.println(numbersOfPackages);
-                    int count = 0;
-                    System.out.println("接收文件");
-                    while (count < numbersOfPackages) {
-                        length = dis.read(buf, 0, buf.length);
-                        System.out.println(length);
 
-                            fos.write(buf, 0, length);
-                            fos.flush();
-                            count++;
+                    System.out.println("接收文件");
+                    while (sumLength < numbersOfPackages) {
+                        length = dis.read(buf, 0, buf.length);
+                        //System.out.println(length);
+                        sumLength += length;
+                        fos.write(buf, 0, length);
+                        fos.flush();
+
 
                     }
                     fos.close();

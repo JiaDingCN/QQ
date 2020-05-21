@@ -30,8 +30,8 @@ public class JsonProcessService extends Thread {
     String username = null;
 
     //only for debug
-    //String fileFolder = "/root/";
-    String fileFolder="E:\\testSocket\\";
+    String fileFolder = "/root/";
+    //String fileFolder="E:\\testSocket\\";
 
     public JsonProcessService(Socket socket) {
         //通过socket对象可以获得输出流，用来写数据
@@ -102,11 +102,11 @@ public class JsonProcessService extends Thread {
                     System.out.println("-------------------接收文件----------------");
                     while(count<numbersOfPackages){
                         length=dis.read(buf,0,buf.length);
-                        System.out.println(length);
+                        //System.out.println(length);
 
                             fos.write(buf,0,length);
                             fos.flush();
-                            count++;
+                            count+=length;
 
                     }
                     fos.close();
@@ -126,10 +126,10 @@ public class JsonProcessService extends Thread {
                     System.out.println("---------------------发送文件----------------");
                     while(count<numbersOfPackages){
                         length=fis.read(buf,0,buf.length);
-                        System.out.println(length);
+                        //System.out.println(length);
                             dos.write(buf,0,length);
                             dos.flush();
-                            count++;
+                            count+=length;
 
                     }
                     System.out.println("文件发送完毕");

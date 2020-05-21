@@ -101,7 +101,7 @@ public class ChatPanelController {
         newStage.setTitle("接收文件");
         newStage.setScene(new Scene(root, 640, 430));
         ReceivePanelController controller = fxmlLoader.getController();
-        controller.setFile(file);
+        controller.setInfo(file,toChat.getUsername());
         newStage.show();
     }
 

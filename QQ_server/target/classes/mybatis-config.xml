@@ -28,8 +28,8 @@
                 <property name="driver" value="com.mysql.jdbc.Driver" />
                 <property name="url" value="jdbc:mysql://localhost:3306/QQ?useTimezone=true&amp;serverTimezone=GMT%2B8&amp;useSSL=false" />
                 <property name="username" value="root" />
-                <!--<property name="password" value="Jd+5521880" />-->
-                <property name="password" value="root" />
+                <property name="password" value="Jd+5521880" />
+                <!--<property name="password" value="root" />-->
             </dataSource>
         </environment>
     </environments>

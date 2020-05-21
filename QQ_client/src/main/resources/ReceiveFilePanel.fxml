@@ -9,9 +9,8 @@
       <Label fx:id="titleLabel" layoutX="39.0" layoutY="35.0" text="您收到了来自xxx的文件:" />
       <Label layoutX="65.0" layoutY="116.0" text="文件夹路径：" />
       <Label fx:id="pathLabel" layoutX="158.0" layoutY="116.0" text="path" />
-      <Button fx:id="chooseFolder" layoutX="393.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#chooseFolder" text="选择" />
+      <Button fx:id="chooseFolder" layoutX="397.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#chooseFolder" text="选择" />
       <Button fx:id="receiveButton" layoutX="121.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#receive" text="接收" />
       <Button fx:id="exitButton" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
-      <Label fx:id="processLabel" layoutX="177.0" layoutY="200.0" prefHeight="15.0" prefWidth="240.0" text="进度条" />
    </children>
 </AnchorPane>
