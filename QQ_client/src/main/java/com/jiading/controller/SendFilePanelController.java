@@ -41,6 +41,7 @@ public class SendFilePanelController {
         this.username = username;
         this.toUsername = toUsername;
         this.socket = SocketService.getSocket();
+        titleLabel.setText("向" + toUsername + "发送文件:");
     }
 
     @FXML
@@ -82,7 +83,7 @@ public class SendFilePanelController {
             if (length == -1) {
                 break;
             }
-            System.out.println(length);
+            //System.out.println(length);
             count += length;
             dos.write(buf, 0, length);
             dos.flush();

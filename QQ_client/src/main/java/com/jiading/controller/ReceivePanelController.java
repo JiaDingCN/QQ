@@ -36,6 +36,7 @@ public class ReceivePanelController {
     public void setInfo(File file,String toUsername) {
         this.file = file;
         this.toUsername=toUsername;
+        titleLabel.setText("您收到了来自"+toUsername+"的文件:");
     }
 
     @FXML
