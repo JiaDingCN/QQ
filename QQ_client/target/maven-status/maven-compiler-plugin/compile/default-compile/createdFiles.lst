@@ -6,6 +6,8 @@ com\jiading\controller\MainPanelController$TableRowController$1.class
 com\jiading\service\SocketService$sendMessThread.class
 com\jiading\controller\MainPanelController$1.class
 com\jiading\domain\InfoUser$stateCodes.class
+com\jiading\controller\ReceivePanelController.class
+com\jiading\controller\SendFilePanelController.class
 com\jiading\domain\InfoUser.class
 com\jiading\controller\ChatPanelController.class
 com\jiading\Main.class

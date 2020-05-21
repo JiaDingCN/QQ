@@ -30,7 +30,8 @@ public class JsonProcessService extends Thread {
     String username = null;
 
     //only for debug
-    String fileFolder = "E:\\testSocket\\";
+    //String fileFolder = "/root/";
+    String fileFolder="E:\\testSocket\\";
 
     public JsonProcessService(Socket socket) {
         //通过socket对象可以获得输出流，用来写数据
@@ -86,6 +87,7 @@ public class JsonProcessService extends Thread {
                 if (user.getInfoType().equals(InfoUser.InfoTypes.HEART.toString())) {
                     ;
                 } else if (user.getInfoType().equals(InfoUser.InfoTypes.SENDFILE.toString())) {
+                    UserSocketUtils.isInTransferFileSet.add(socket);
                     String path=fileFolder+user.getCode();
                     Integer numbersOfPackages=Integer.valueOf(user.getChatInfo());
                     File file=new File(path);
@@ -96,12 +98,45 @@ public class JsonProcessService extends Thread {
                     FileOutputStream fos=new FileOutputStream(file);
                     DataInputStream dis=new DataInputStream(socket.getInputStream());
                     Integer length=0;
-                    for(int i=0;i<numbersOfPackages;i++){
+                    int count=0;
+                    System.out.println("-------------------接收文件----------------");
+                    while(count<numbersOfPackages){
                         length=dis.read(buf,0,buf.length);
-                        fos.write(buf,0,length);
-                        fos.flush();
+                        System.out.println(length);
+
+                            fos.write(buf,0,length);
+                            fos.flush();
+                            count++;
+
                     }
                     fos.close();
+                    String toUsername=user.getToUsername();
+                    InfoUser user2=new InfoUser();
+                    user2.setInfoType(InfoUser.InfoTypes.SENDFILE.toString());
+                    user2.setUsername(user.getUsername());
+                    user2.setCode(user.getCode());
+                    Socket toSocket = UserSocketUtils.getSocket(toUsername);
+                    UserSocketUtils.isInTransferFileSet.add(toSocket);
+                    DataOutputStream dos=new DataOutputStream(toSocket.getOutputStream());
+                    FileInputStream fis=new FileInputStream(file);
+                    user2.setChatInfo(user.getChatInfo());
+                    PackageSender.sendPackage(toSocket,user2);
+                    System.out.println(user2);
+                   count=0;
+                    System.out.println("---------------------发送文件----------------");
+                    while(count<numbersOfPackages){
+                        length=fis.read(buf,0,buf.length);
+                        System.out.println(length);
+                            dos.write(buf,0,length);
+                            dos.flush();
+                            count++;
+
+                    }
+                    System.out.println("文件发送完毕");
+                    fis.close();
+                    UserSocketUtils.isInTransferFileSet.remove(socket);
+                    UserSocketUtils.isInTransferFileSet.remove(toSocket);
+                    file.delete();
                 } else if (user.getInfoType().equals(InfoUser.InfoTypes.CHAT.toString())) {
                     //默认能发送数据包的就是在线的，这个在前台控制
                     Socket toSocket = UserSocketUtils.getSocket(user.getToUsername());
@@ -169,12 +204,15 @@ public class JsonProcessService extends Thread {
                             InfoUser info = new InfoUser();
                             info.setInfoType(InfoUser.InfoTypes.SIGNUP.toString());
                             if (flag) {
+                                System.out.println("before mail");
                                 MailUtils.sendCode(fromInfoUserForSignUp.getEmail(), uuid);
+                                System.out.println("after mail");
                                 info.setChatInfo(InfoUser.stateCodes.CODEASKED.toString());
                                 info.setInfoType(InfoUser.InfoTypes.SIGNUP.toString());
                             } else {
                                 info.setChatInfo(InfoUser.stateCodes.SIGNUPFALL_USERNAME_ALREADY_EXISTES.toString());
                             }
+                            System.out.println("sentPackage:"+info);
                             PackageSender.sendPackage(socket, info);
                         } else {
                             boolean flag = service.verifyCode(fromInfoUserForSignUp);

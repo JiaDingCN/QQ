@@ -3,10 +3,12 @@ E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\WarnPanelContr
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\AppMain.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\utils\PackageList.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\domain\InfoUser.java
+E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\ReceivePanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\SignInPanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\SignPanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\MainPanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\SignUpPanelController.java
+E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\SendFilePanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\service\SocketService.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\AddFriendPanelController.java
 E:\JavaProjects\QQ\QQ_client\src\main\java\com\jiading\controller\SignUpPanelCodeController.java

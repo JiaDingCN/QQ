@@ -53,11 +53,15 @@ public class UserServiceImpl implements UserService {
         try {
             String userForCheck = userDao.isUsernameExists(user.getUsername());
             session.commit();
+
             if (userForCheck == null) {
+                System.out.println("true");
                 userDao.signUp(user);
                 session.commit();
+
                 return true;
             } else {
+
                 return false;
             }
         } catch (Exception e) {

@@ -117,16 +117,6 @@ public class MainPanelController {
         renewData(receivedUser.getChatInfo());
     }
 
-    public void sendFile(MouseEvent mouseEvent) throws IOException {
-        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getClassLoader().getResource("SendFilePanel.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage newStage=new Stage();
-        newStage.setTitle("发送文件");
-        newStage.setScene(new Scene(root, 640, 430));
-        SendFilePanelController controller=fxmlLoader.getController();
-        controller.setInfo(username,username);
-        newStage.show();
-    }
 
     class TableRowController extends TableRow<Friend> {
         public TableRowController(){

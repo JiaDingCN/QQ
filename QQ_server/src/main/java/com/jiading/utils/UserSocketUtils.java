@@ -6,6 +6,7 @@ import com.jiading.service.impl.UserSocketProcessService;
 
 import java.net.Socket;
 import java.util.Enumeration;
+import java.util.HashSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -16,8 +17,10 @@ import java.util.concurrent.ConcurrentHashMap;
  **/
 public class UserSocketUtils {
     private static ConcurrentHashMap<String, Socket>socketMap;
+    public static HashSet<Socket>isInTransferFileSet;
     static{
         socketMap=new ConcurrentHashMap<>();
+        isInTransferFileSet=new HashSet<>();
         HeartPackageSender heartSender=new HeartPackageSender();
         heartSender.start();
     }
@@ -68,6 +71,7 @@ public class UserSocketUtils {
                 Enumeration<Socket> elements = socketMap.elements();
                 while(elements.hasMoreElements()){
                     Socket socket=elements.nextElement();
+                    if(!isInTransferFileSet.contains(socket))
                     PackageSender.sendPackage(socket,user);
                 }
             }

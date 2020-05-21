@@ -14,6 +14,10 @@ import java.util.LinkedList;
 public class PackageList {
     //加好友的包单独放在一个list中
     public static LinkedList<InfoUser> newFriends = new LinkedList<>();
+    public static boolean isInTransferFile=false;
+    public static void setIsInTransferFile(boolean isIn){
+        isInTransferFile=isIn;
+    }
     private static LinkedList<InfoUser> packagesToSend = new LinkedList<>();
     private static LinkedList<InfoUser> packagesForReceive = new LinkedList<>();
 
@@ -51,9 +55,11 @@ public class PackageList {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                InfoUser user=new InfoUser();
-                user.setInfoType(InfoUser.InfoTypes.HEART.toString());
-                PackageList.sendPackage(user);
+                if(!isInTransferFile){
+                    InfoUser user=new InfoUser();
+                    user.setInfoType(InfoUser.InfoTypes.HEART.toString());
+                    PackageList.sendPackage(user);
+                }
             }
         }
     }

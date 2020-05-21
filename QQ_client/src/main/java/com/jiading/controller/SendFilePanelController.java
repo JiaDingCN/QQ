@@ -3,7 +3,6 @@ package com.jiading.controller;
 import com.jiading.domain.InfoUser;
 import com.jiading.service.SocketService;
 import com.jiading.utils.PackageList;
-import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -51,6 +50,7 @@ public class SendFilePanelController {
     }
 
     public void send(MouseEvent mouseEvent) throws IOException, InterruptedException {
+        PackageList.setIsInTransferFile(true);
         FileInputStream fis=new FileInputStream(fileToSend);
         DataOutputStream dos=new DataOutputStream(socket.getOutputStream());
         InfoUser infoUser=new InfoUser();
@@ -69,14 +69,20 @@ public class SendFilePanelController {
         }
         byte[]buf=new byte[1024];
         int length=0;
-        for(int i=0;i<times;i++){
+        int count=0;
+        while(count<times){
             length=fis.read(buf,0,buf.length);
-            dos.write(buf,0,length);
-            dos.flush();
+            System.out.println(length);
+
+                count++;
+                dos.write(buf,0,length);
+                dos.flush();
+
         }
         fis.close();
         Stage window = (Stage) sendButton.getScene().getWindow();
         window.close();
+        PackageList.setIsInTransferFile(false);
     }
 
     public void exit(MouseEvent mouseEvent) {

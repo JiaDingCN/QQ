@@ -11,6 +11,7 @@ import java.util.Properties;
 public final class MailUtils {
     private static final String USER = "1004005214@qq.com"; // 发件人称号，同邮箱地址
     private static final String PASSWORD = "qbxvuznuvdsrbcfd"; // 如果是qq邮箱可以使户端授权码，或者登录密码
+    private static final String HOST = "smtp.qq.com";
 
     /**
      *
@@ -23,7 +24,10 @@ public final class MailUtils {
         try {
             final Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.host", "smtp.qq.com");
+            props.put("mail.smtp.host", HOST);
+            props.put("mail.smtp.port", "465");
+            props.put("mail.transport.protocol", "smtp");
+            props.put("mail.smtp.ssl.enable", "true");
             //props.put("mail.smtp.host", "smtp.office365.com");
             // 发件人的账号
             props.put("mail.user", USER);
