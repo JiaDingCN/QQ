@@ -29,7 +29,7 @@ public class JsonProcessService extends Thread {
     Socket socket;
     String username = null;
 
-    //only for debug
+
     String fileFolder = "/root/";
     //String fileFolder="E:\\testSocket\\";
 

@@ -15,7 +15,7 @@ public class AppMain{
      */
     public static void main(String[] args) {
         //SocketService socketService=new SocketService("192.168.1.4",6768);
-        SocketService socketService=new SocketService("39.96.62.124",6768);
+        SocketService socketService=new SocketService("<你的服务器ip>",6768);
         socketService.start();
         Application.launch(Main.class,args);
     }
