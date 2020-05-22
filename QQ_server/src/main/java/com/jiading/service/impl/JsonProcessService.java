@@ -153,11 +153,13 @@ public class JsonProcessService extends Thread {
                     //查询好友此时是否在线，返回好友在线状态
                     InfoUser info = new InfoUser();
                     if (UserSocketUtils.isOnline(user.getToUsername())) {
+
                         InfoUser toInfo = new InfoUser();
                         toInfo.setInfoType(InfoUser.InfoTypes.FRIENDADDED.toString());
                         toInfo.setUsername(user.getUsername());
                         Socket toSocket = UserSocketUtils.getSocket(user.getToUsername());
                         PackageSender.sendPackage(toSocket, toInfo);
+
                         info.setChatInfo(InfoUser.stateCodes.NEW_FRIEND_ONLINE.toString());
                     } else {
                         info.setChatInfo(InfoUser.stateCodes.NEW_FRIEND_OFFLINE.toString());

@@ -17,9 +17,34 @@ package com.jiading.domain;
         * 聊天内容
  */
 public class InfoUser {
-    public enum InfoTypes {
-        SIGNUP, SIGNIN, CHAT, HEART,FRIENDADDED,ADDFRIEND,SENDFILE;
+
+    @Override
+    public String toString() {
+        return "InfoUser{" +
+                "infoType='" + infoType + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", code='" + code + '\'' +
+                ", toUsername='" + toUsername + '\'' +
+                ", chatInfo='" + chatInfo + '\'' +
+                '}';
     }
+
+    public enum InfoTypes {
+        SIGNUP, SIGNIN, CHAT, HEART, FRIENDADDED, ADDFRIEND, SENDFILE;
+    }
+    private String infoType;
+    private String username;
+    private String password;
+    private String email;
+    public enum stateCodes {
+        NEEDVERIFY, SIGNINSUCCESS, SIGNUUPSUCCESS, SIGNINFALL, SIGNUPFALL_USERNAME_ALREADY_EXISTES,
+        SIGNUPFALL_VERIFYCODE_WRONG, ASKCODE, CODEASKED, NEW_FRIEND_ONLINE, NEW_FRIEND_OFFLINE;
+    }
+    private String code;
+    private String toUsername;
+    private String chatInfo;
 
     public String getInfoType() {
         return infoType;
@@ -49,19 +74,6 @@ public class InfoUser {
         return email;
     }
 
-    @Override
-    public String toString() {
-        return "InfoUser{" +
-                "infoType='" + infoType + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", code='" + code + '\'' +
-                ", toUsername='" + toUsername + '\'' +
-                ", chatInfo='" + chatInfo + '\'' +
-                '}';
-    }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -86,19 +98,8 @@ public class InfoUser {
         return chatInfo;
     }
 
-    public enum stateCodes {
-        NEEDVERIFY, SIGNINSUCCESS, SIGNUUPSUCCESS, SIGNINFALL, SIGNUPFALL_USERNAME_ALREADY_EXISTES, SIGNUPFALL_VERIFYCODE_WRONG, ASKCODE, CODEASKED,NEW_FRIEND_ONLINE,NEW_FRIEND_OFFLINE;
-    }
 
     public void setChatInfo(String chatInfo) {
         this.chatInfo = chatInfo;
     }
-
-    private String infoType;
-    private String username;
-    private String password;
-    private String email;
-    private String code;
-    private String toUsername;
-    private String chatInfo;
 }
