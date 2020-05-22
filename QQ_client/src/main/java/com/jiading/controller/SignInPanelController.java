@@ -57,7 +57,7 @@ public class SignInPanelController {
             Parent root = fxmlLoader.load();
             Stage newStage=new Stage();
             newStage.setTitle("主菜单");
-            newStage.setScene(new Scene(root, 250, 649));
+            newStage.setScene(new Scene(root, 340, 655));
             MainPanelController controller=fxmlLoader.getController();
             controller.setInfo(usernameField.getText(),receivedUser.getChatInfo(),passwordField.getText());
             newStage.show();

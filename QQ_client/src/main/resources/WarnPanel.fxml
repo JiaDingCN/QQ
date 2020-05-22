@@ -7,6 +7,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jiading.controller.WarnPanelController">
    <children>
       <Label fx:id="Text" layoutX="154.0" layoutY="128.0" prefHeight="38.0" prefWidth="219.0" text="warn的内容" />
-      <Button fx:id="exit" layoutX="417.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#exit" text="确定" />
+      <Button fx:id="exit" layoutX="417.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#exit" text="确定" stylesheets="main.css" styleClass="smallbutton" />
    </children>
 </AnchorPane>

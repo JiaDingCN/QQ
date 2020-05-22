@@ -10,7 +10,7 @@
    <children>
       <Label layoutX="41.0" layoutY="30.0" prefHeight="74.0" prefWidth="411.0" text="我们已向您的邮箱发送了一封含有验证码的邮件，请将其填入下方的输入框:" />
       <TextField fx:id="codeField" layoutX="256.0" layoutY="139.0" />
-      <Button fx:id="submitButton" layoutX="121.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#submit" text="确定" />
-      <Button fx:id="exitButton" layoutX="367.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
+      <Button fx:id="submitButton" layoutX="121.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#submit" text="确定" stylesheets="main.css" styleClass="smallbutton" />
+      <Button fx:id="exitButton" layoutX="367.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" stylesheets="main.css" styleClass="smallbutton" />
    </children>
 </AnchorPane>

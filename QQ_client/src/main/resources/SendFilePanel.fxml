@@ -9,8 +9,8 @@
       <Label fx:id="titleLabel" layoutX="39.0" layoutY="35.0" text="向xxx发送文件:" />
       <Label layoutX="65.0" layoutY="116.0" text="文件路径：" />
       <Label fx:id="pathLabel" layoutX="158.0" layoutY="116.0" text="" />
-      <Button fx:id="chooseFile" layoutX="397.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#chooseFile" text="选择" />
-      <Button fx:id="sendButton" layoutX="121.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#send" text="发送" />
-      <Button fx:id="exitButton" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
+      <Button fx:id="chooseFile" layoutX="397.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#chooseFile" text="选择" stylesheets="main.css" styleClass="smallbutton" />
+      <Button fx:id="sendButton" layoutX="121.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#send" text="发送" stylesheets="main.css" styleClass="smallbutton" />
+      <Button fx:id="exitButton" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" stylesheets="main.css" styleClass="smallbutton" />
       </children>
 </AnchorPane>

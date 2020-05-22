@@ -14,8 +14,8 @@
       <Label layoutX="85.0" layoutY="192.0" text="邮箱:" />
       <TextField fx:id="usernameField" layoutX="153.0" layoutY="99.0" />
       <TextField fx:id="emailField" layoutX="153.0" layoutY="188.0" />
-      <Button fx:id="submitButton" layoutX="77.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#submit" text="提交" />
-      <Button fx:id="exitButton" layoutX="286.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#exit" text="返回" />
+      <Button fx:id="submitButton" layoutX="77.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#submit" text="提交" stylesheets="main.css" styleClass="smallbutton"  />
+      <Button fx:id="exitButton" layoutX="286.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#exit" text="返回" stylesheets="main.css" styleClass="smallbutton" />
       <PasswordField fx:id="passwordField" layoutX="153.0" layoutY="142.0" />
    </children>
 </AnchorPane>

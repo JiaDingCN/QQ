@@ -9,10 +9,10 @@
    <children>
       <TextArea fx:id="messagesField" layoutX="39.0" layoutY="40.0" prefHeight="255.0" prefWidth="518.0" />
       <TextArea fx:id="inputField" layoutX="39.0" layoutY="335.0" prefHeight="117.0" prefWidth="518.0" />
-      <Button fx:id="submitButton" layoutX="506.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#submit" text="发送" />
-      <Button fx:id="exitButton" layoutX="557.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" />
+      <Button fx:id="submitButton" layoutX="506.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#submit" text="发送" stylesheets="main.css" styleClass="smallbutton"  />
+      <Button fx:id="exitButton" layoutX="557.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出" stylesheets="main.css" styleClass="smallbutton" />
       <Label fx:id="chatInfoText" layoutX="33.0" layoutY="17.0" text="您和xxx正在聊天" />
       <Label layoutX="39.0" layoutY="309.0" text="输入框:" />
-      <Button fx:id="fileSenderButton" layoutX="31.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#sendFile" text="发送文件" />
+      <Button fx:id="fileSenderButton" layoutX="31.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#sendFile" text="发送文件" stylesheets="main.css" styleClass="smallbutton"/>
    </children>
 </AnchorPane>

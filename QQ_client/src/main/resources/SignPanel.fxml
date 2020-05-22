@@ -11,7 +11,7 @@
             fx:controller="com.jiading.controller.SignPanelController"
             prefHeight="400.0" prefWidth="600.0">
     <children>
-        <Button fx:id="SignUpButton" layoutX="184.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#toSignUpPanel" prefHeight="50.0" prefWidth="231.0" text="注册" />
-        <Button fx:id="SignInButton" layoutX="184.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#toSignInPanel" prefHeight="50.0" prefWidth="231.0" text="登录" />
+        <Button fx:id="SignUpButton" layoutX="184.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#toSignUpPanel" prefHeight="50.0" prefWidth="231.0" text="注册" stylesheets="main.css" styleClass="bigButton"/>
+        <Button fx:id="SignInButton" layoutX="184.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#toSignInPanel" prefHeight="50.0" prefWidth="231.0" text="登录" stylesheets="main.css" styleClass="bigButton"/>
     </children>
 </AnchorPane>

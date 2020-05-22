@@ -10,7 +10,7 @@
    <children>
       <Label layoutX="31.0" layoutY="25.0" text="请输入要添加的好友的用户名:" />
       <TextField fx:id="toUsernameField" layoutX="267.0" layoutY="21.0" />
-      <Button fx:id="submitButton" layoutX="96.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#submit" text="确定" />
-      <Button fx:id="exitButton" layoutX="347.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#exit" text="取消" />
+      <Button fx:id="submitButton" layoutX="96.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#submit" text="确定" stylesheets="main.css" styleClass="smallbutton" />
+      <Button fx:id="exitButton" layoutX="347.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#exit" text="取消" stylesheets="main.css" styleClass="smallbutton" />
    </children>
 </AnchorPane>
